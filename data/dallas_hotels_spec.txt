@@ -1,0 +1,12 @@
+[out:json][timeout:25];
+(area[name="Dallas"];)->.searchArea;
+(
+  node["tourism"="hotel"](area.searchArea);
+);
+out body;
+(
+  way["tourism"="hotel"](area.searchArea);
+  rel["tourism"="hotel"](area.searchArea);
+  rel["name"="Kay Bailey Hutchinson Convention Center"](area.searchArea);
+);
+out center;

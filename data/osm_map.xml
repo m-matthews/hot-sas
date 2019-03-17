@@ -1,0 +1,280 @@
+<?xml version="1.0" ?>
+<SXLEMAP version="2.1">
+  <TABLE name="CHANGESETS">
+    <TABLE-PATH syntax="XPath">
+       /osm/changeset
+    </TABLE-PATH>
+    <COLUMN name="id">
+      <PATH>
+         /osm/changeset/@id
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+    <COLUMN name="user">
+      <PATH>
+         /osm/changeset/@user
+      </PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>STRING</DATATYPE>
+      <LENGTH>32</LENGTH>
+    </COLUMN>
+    <COLUMN name="uid">
+      <PATH>
+         /osm/changeset/@uid
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+    <COLUMN name="created_at">
+      <PATH>
+         /osm/changeset/@created_at
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>DATETIME</DATATYPE>
+    </COLUMN>
+    <COLUMN name="closed_at">
+      <PATH>
+         /osm/changeset/@closed_at
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>DATETIME</DATATYPE>
+    </COLUMN>
+    <COLUMN name="min_lat">
+      <PATH>
+         /osm/changeset/@min_lat
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>FLOAT</DATATYPE>
+    </COLUMN>
+    <COLUMN name="min_lon">
+      <PATH>
+         /osm/changeset/@min_lon
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>FLOAT</DATATYPE>
+    </COLUMN>
+    <COLUMN name="max_lat">
+      <PATH>
+         /osm/changeset/@max_lat
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>FLOAT</DATATYPE>
+    </COLUMN>
+    <COLUMN name="max_lon">
+      <PATH>
+         /osm/changeset/@max_lon
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>FLOAT</DATATYPE>
+    </COLUMN>
+    <COLUMN name="changes_count">
+      <PATH>
+         /osm/changeset/@changes_count
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+  </TABLE>
+  <TABLE name="CHANGESET_TAGS">
+    <TABLE-PATH syntax="XPath">
+       /osm/changeset/tag
+    </TABLE-PATH>
+    <COLUMN name="id" retain="YES">
+      <PATH>
+         /osm/changeset/@id
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+    <COLUMN name="key">
+      <PATH>
+         /osm/changeset/tag/@k
+      </PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>STRING</DATATYPE>
+      <LENGTH>32</LENGTH>
+    </COLUMN>
+    <COLUMN name="value">
+      <PATH>
+         /osm/changeset/tag/@v
+      </PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>STRING</DATATYPE>
+      <LENGTH>200</LENGTH>
+    </COLUMN>
+  </TABLE>
+  <TABLE name="NODES">
+    <TABLE-PATH syntax="XPath">
+       /osm/node
+    </TABLE-PATH>
+    <COLUMN name="id">
+      <PATH>
+         /osm/node/@id
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+    <COLUMN name="version">
+      <PATH>
+         /osm/node/@version
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+    <COLUMN name="timestamp">
+      <PATH>
+         /osm/node/@timestamp
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>DATETIME</DATATYPE>
+    </COLUMN>
+    <COLUMN name="uid">
+      <PATH>
+         /osm/node/@uid
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+    <COLUMN name="user">
+      <PATH>
+         /osm/node/@user
+      </PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>STRING</DATATYPE>
+      <LENGTH>32</LENGTH>
+    </COLUMN>
+    <COLUMN name="lat">
+      <PATH>
+         /osm/node/@lat
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>FLOAT</DATATYPE>
+    </COLUMN>
+    <COLUMN name="lon">
+      <PATH>
+         /osm/node/@lon
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>FLOAT</DATATYPE>
+    </COLUMN>
+  </TABLE>
+  <TABLE name="NODE_TAGS">
+    <TABLE-PATH syntax="XPath">
+       /osm/node/tag
+    </TABLE-PATH>
+    <COLUMN name="id" retain="YES">
+      <PATH>
+         /osm/node/@id
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+    <COLUMN name="key">
+      <PATH>
+         /osm/node/tag/@k
+      </PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>STRING</DATATYPE>
+      <LENGTH>32</LENGTH>
+    </COLUMN>
+    <COLUMN name="value">
+      <PATH>
+         /osm/node/tag/@v
+      </PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>STRING</DATATYPE>
+      <LENGTH>200</LENGTH>
+    </COLUMN>
+  </TABLE>
+
+  <TABLE name="WAYS">
+    <TABLE-PATH syntax="XPath">
+       /osm/way
+    </TABLE-PATH>
+    <COLUMN name="id">
+      <PATH>
+         /osm/way/@id
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+    <COLUMN name="version">
+      <PATH>
+         /osm/way/@version
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+    <COLUMN name="timestamp">
+      <PATH>
+         /osm/way/@timestamp
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>DATETIME</DATATYPE>
+    </COLUMN>
+    <COLUMN name="uid">
+      <PATH>
+         /osm/way/@uid
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+    <COLUMN name="user">
+      <PATH>
+         /osm/way/@user
+      </PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>STRING</DATATYPE>
+      <LENGTH>32</LENGTH>
+    </COLUMN>
+  </TABLE>
+  <TABLE name="WAY_NODES">
+    <TABLE-PATH syntax="XPath">
+       /osm/way/nd
+    </TABLE-PATH>
+    <COLUMN name="id" retain="YES">
+      <PATH>
+         /osm/way/@id
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+    <COLUMN name="ref">
+      <PATH>
+         /osm/way/nd/@ref
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+  </TABLE>
+  <TABLE name="WAY_TAGS">
+    <TABLE-PATH syntax="XPath">
+       /osm/way/tag
+    </TABLE-PATH>
+    <COLUMN name="id" retain="YES">
+      <PATH>
+         /osm/way/@id
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>INTEGER</DATATYPE>
+    </COLUMN>
+    <COLUMN name="key">
+      <PATH>
+         /osm/way/tag/@k
+      </PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>STRING</DATATYPE>
+      <LENGTH>32</LENGTH>
+    </COLUMN>
+    <COLUMN name="value">
+      <PATH>
+         /osm/way/tag/@v
+      </PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>STRING</DATATYPE>
+      <LENGTH>200</LENGTH>
+    </COLUMN>
+  </TABLE>
+
+</SXLEMAP>
