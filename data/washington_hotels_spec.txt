@@ -1,0 +1,12 @@
+[out:json][timeout:25];                                                         
+(area[name="District of Columbia"];)->.searchArea;                              
+(                                                                               
+  node["tourism"="hotel"](area.searchArea);                                     
+);                                                                              
+out body;                                                                       
+(                                                                               
+  way["tourism"="hotel"](area.searchArea);                                      
+  rel["tourism"="hotel"](area.searchArea);                                      
+  way["name"="Walter E. Washington Convention Center"](area.searchArea);        
+);                                                                              
+out center;                                                                     

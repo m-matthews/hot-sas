@@ -9,23 +9,49 @@ The [Humanitarian OpenStreetMap Team](https://www.hotosm.org) (HOT) community co
 
 This repository examines [OpenStreetMap](https://www.openstreetmap.org) data and introduces HOT and some of the associated mapping tasks, including assisting the aid efforts during the May 2018 Ebola outbreak in the Democratic Republic of the Congo.
 
-Analysis is performed on the data using the SAS® ODS Graphics procedures (including PROC SGMAP) to visualize the contributions to OpenStreetMap both spatially and over time.
+Analysis is performed on the data using the SAS® ODS Graphics procedures (including `PROC SGMAP`) to visualize the contributions to OpenStreetMap both spatially and over time.
 
 
-## 1. Hotels in Dallas
+## 1. OpenStreetMap data using the OverPass API
 
-The first program [01_dallas_hotels.sas](sas/01_dallas_hotels.sas) provides an example of extracting the OpenStreetMap data for all of the Hotels in Dallas using the [Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API).
+The first set of programs provide examples of extracting the OpenStreetMap data using the [Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API).
 
-The PROC SGMAP output includes using OpenStreetMap tiles for the background, and the markers are based on buildings tagged in the OpenStreetMap data:
+
+### 1.1 Hotels in Dallas
+
+The first program [01_dallas_hotels.sas](sas/01_dallas_hotels.sas) provides an example of extracting the OpenStreetMap data for all of the Hotels in Dallas using the [Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API) which was the site of the **SAS Global Forum 2019**.
+
+The `PROC SGMAP` output includes using OpenStreetMap tiles for the background, and the markers are based on buildings tagged in the OpenStreetMap data:
 
 ![PROC SGMAP - Dallas Hotels](images/01_dallas_hotels.png "PROC SGMAP - Dallas Hotels")
+
+
+### 1.2 Hotels in Washington D.C.
+
+The second program [01_washington_hotels.sas](sas/01_washington_hotels.sas) is similar, however this time is based in Washington D.C the site of the **SAS Global Forum 2020**:
+
+![PROC SGMAP - Washington D.C. Hotels](images/01_washington_hotels.png "PROC SGMAP - Washington D.C. Hotels")
+
+
+### 1.3 Airports in Maryland with IATA Codes
+
+The next program [01_maryland_airports.sas](sas/01_maryland_airports.sas) extracts the OpenStreetMap data for all of the Airports in Maryland with IATA codes, including labelling the markers:
+
+![PROC SGMAP - Maryland Airports](images/01_maryland_airports.png "PROC SGMAP - Maryland Airports")
+
+
+### 1.4 Outline of Central Park
+
+The program [01_central_park.sas](sas/01_central_park.sas) extracts the OpenStreetMap *Way* surrounding Central Park in New York and uses the `PROC SGMAP` statement `SERIES` to draw the boundary:
+
+![PROC SGMAP - Central Park](images/01_central_park.png "PROC SGMAP - Central Park")
 
 
 ## 2. OpenStreetMap Changesets
 
 The program [02_user_changesets.sas](sas/02_user_changesets.sas) introduces the OpenStreetMap XML format and how to read this with SAS Software.
 
-The PROC SGMAP output shows the last 100 edits for a contributor to OpenStreetMap using the ESRI World Topographical background tiles:
+The `PROC SGMAP` output shows the last 100 edits for a contributor to OpenStreetMap using the ESRI World Topographical background tiles:
 
 ![PROC SGMAP - OpenStreetMap User Changesets](images/02_user_changesets_ws.png "PROC SGMAP - OpenStreetMap User Changesets")
 
@@ -34,7 +60,7 @@ The PROC SGMAP output shows the last 100 edits for a contributor to OpenStreetMa
 
 The program [03_hotosm_tasks.sas](sas/03_hotosm_tasks.sas) shows the location of the many tasks completed by contributors to the Humanitarian OpenStreetMap Team.
 
-The first display shows the location of the global tasks using PROC SGMAP with ESRI World Topographical background tiles:
+The first display shows the location of the global tasks using `PROC SGMAP` with ESRI World Topographical background tiles:
 
 ![PROC SGMAP - HOTOSM Tasks](images/03_hotosm_tasks_all.png "PROC SGMAP - HOTOSM Tasks")
 

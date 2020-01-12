@@ -1,0 +1,7 @@
+[out:json][timeout:25];                                                         
+(area[name="Manhattan"];)->.searchArea;                                         
+(                                                                               
+  way["name"="Central Park"](area.searchArea);                                  
+);                                                                              
+(._;>;);                                                                        
+out;                                                                            
