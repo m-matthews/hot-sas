@@ -1,0 +1,9 @@
+[out:xml][timeout:25];                                                          
+(                                                                               
+  node["tourism"="artwork"](35.815, -78.767, 35.829, -78.749);                  
+);                                                                              
+out body;                                                                       
+(                                                                               
+  way["name"~"SAS Building"](35.815, -78.767, 35.829, -78.749);                 
+);                                                                              
+out center;                                                                     

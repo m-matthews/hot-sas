@@ -228,6 +228,20 @@
       <DATATYPE>STRING</DATATYPE>
       <LENGTH>32</LENGTH>
     </COLUMN>
+    <COLUMN name="center_lat">
+      <PATH>
+         /osm/way/center/@lat
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>FLOAT</DATATYPE>
+    </COLUMN>
+    <COLUMN name="center_lon">
+      <PATH>
+         /osm/way/center/@lon
+      </PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>FLOAT</DATATYPE>
+    </COLUMN>
   </TABLE>
   <TABLE name="WAY_NODES">
     <TABLE-PATH syntax="XPath">
